@@ -1,2 +1,2 @@
-# Next_Js_Project
-* Blog App In Next JS
+# Next_JS Concepts
+* Routing in Next JS.
