@@ -5,3 +5,5 @@
     * getStaticPaths().
     * Fallback:True,False,Block.
     * Incremental Static Regeneration
+ * Server Side Rendering
+    * getServerSideProps()
