@@ -2,10 +2,10 @@ import React from 'react'
 import { useRouter } from 'next/router';
 
 export default function Post({ post }: any) {
-    const router=useRouter();
+    const router = useRouter();
 
-    if(router.isFallback){
-      return <h1>Loading...</h1>
+    if (router.isFallback) {
+        return (<h1>Loading...</h1>)
     }
 
     return (
@@ -19,7 +19,7 @@ export default function Post({ post }: any) {
 }
 
 // Fall Back False
-
+// Page falls to 404 when not available
 // --------------------x----------------------
 
 // export async function getStaticPaths() {
@@ -39,8 +39,27 @@ export default function Post({ post }: any) {
 //     }
 // }
 
-// Fall Back True
+// 
+// Fall Back Blocking
+// There is no falling back
+// Just a normal loading element 
+// --------------------x----------------------
+// export async function getStaticPaths() {
+//     return {
+//         paths: [{
+//             params: { postId: '1' }
+//         }, {
+//             params: { postId: '2' }
+//         }, {
+//             params: { postId: '3' }
+//         }],
+//         fallback: blocking,
+//     }
+// }
 
+
+// Fall Back True
+// New page is generated and served from server side
 // --------------------x----------------------
 export async function getStaticPaths() {
     return {
