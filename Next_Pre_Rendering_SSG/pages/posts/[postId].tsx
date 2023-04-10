@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 export default function Post({ post }: any) {
     const router = useRouter();
 
+    // For Fall blocking we will not use Is FallBack
     if (router.isFallback) {
         return (<h1>Loading...</h1>)
     }
@@ -60,6 +61,8 @@ export default function Post({ post }: any) {
 
 // Fall Back True
 // New page is generated and served from server side
+// There is Fall back and hence we first visit fallback page and then visit main
+// content
 // --------------------x----------------------
 export async function getStaticPaths() {
     return {
