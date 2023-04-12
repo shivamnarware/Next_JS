@@ -5,15 +5,14 @@ import React from 'react'
 export default function NewsArticle({ articles }: any) {
     return (
         <>
-            <h1>List of news article</h1>
-            {
-                articles.map((article: any) => {
+            <h1>List of news article</h1>{
+                articles.map((article: any) => (
                     <div key={article.id}>
                         <h2>
                             {article.id} {article.title} | {article.category}
                         </h2>
                     </div>
-                })
+                ))
             }
         </>
     )
