@@ -5,7 +5,7 @@
     * getStaticPaths().
     * Fallback:True,False,Block.
     * Incremental Static Regeneration
-    * JSON Server
+    * JSON Server()
  * Pre-Rendering in Next JS Server Side Rendering [SSR]
     * getServerSideProps()
-    * JSON Server
+    * JSON Server()
