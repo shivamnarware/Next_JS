@@ -9,3 +9,5 @@
  * Pre-Rendering in Next JS Server Side Rendering [SSR]
     * getServerSideProps()
     * JSON Server()
+  
+ * API Routes
