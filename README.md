@@ -6,7 +6,7 @@
     * getStaticProps().
     * getStaticPaths().
     * Fallback:True,False,Block.
-    * Incremental Static Regeneration
+    * Incremental Static Regeneration [ISR]
     * JSON Server()
     
  * Pre-Rendering in Next JS Server Side Rendering [SSR]
@@ -15,3 +15,8 @@
     * Client Side Rendering [CSR]
   
  * API Routes
+    * Handle GET  Request
+    * Handle POST Request
+    * Dynamic API Routes
+    * Handle DELETE Request
+    * Catch All API Routes
