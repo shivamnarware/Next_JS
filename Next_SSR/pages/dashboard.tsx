@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react'
 export default function dashboard() {
 
     const [isLoading, setIsLoading] = useState<Boolean>(true);
-    const [dashboardData, setDashboardData] = useState<any>();
+    const [dashboardData, setDashboardData] = useState<any>(null);
 
     useEffect(() => {
         async function fetchDashboardData() {
             const response = await fetch(`http://localhost:4000/dashboard`);
-            const data = response.json();
+            const data = await response.json();
             console.log(data);
             setDashboardData(data);
             setIsLoading(false);
