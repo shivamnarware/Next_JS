@@ -1,4 +1,3 @@
-import { headers } from 'next/dist/client/components/headers';
 import React, { useState } from 'react'
 
 export default function CommentPage() {
@@ -23,7 +22,16 @@ export default function CommentPage() {
     })
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
+  }
+
+  const deletecomment = async (commentid: any) => {
+    const response = await fetch(`/api/comments/${commentid}`, {
+      method: 'DELETE',
+    })
+    const data = await response.json();
+    // console.log(data);
+    fetchComments();
   }
 
 
@@ -39,7 +47,11 @@ export default function CommentPage() {
         Load Comments
       </button>
       {comments.map((comment: any) => (
-        <div key={comment.id}> {comment.id}{comment.text}</div>
+        <div key={comment.id}>
+          {comment.id}{comment.text}
+          <button onClick={() => deletecomment(comment.id)}>Delete</button>
+        </div>
+
       ))}
     </>
   )
